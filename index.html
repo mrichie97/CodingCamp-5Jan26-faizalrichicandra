@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Super App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <div>
+                <p class="stat-label">TOTAL TASKS</p>
+                <h2 id="total-tasks">0</h2>
+            </div>
+            <div class="icon-box bg-blue"><i class="fa-solid fa-list-check"></i></div>
+        </div>
+
+        <div class="stat-box">
+            <div>
+                <p class="stat-label">COMPLETED</p>
+                <h2 id="completed-tasks">0</h2>
+            </div>
+            <div class="icon-box bg-green"><i class="fa-solid fa-check"></i></div>
+        </div>
+
+        <div class="stat-box">
+            <div>
+                <p class="stat-label">PENDING</p>
+                <h2 id="pending-tasks">0</h2>
+            </div>
+            <div class="icon-box bg-orange"><i class="fa-solid fa-clock"></i></div>
+        </div>
+
+        <div class="stat-box">
+            <div>
+                <p class="stat-label">PROGRESS</p>
+                <h2 id="progress-percent">0%</h2>
+            </div>
+            <div class="icon-box bg-blue-light"><i class="fa-solid fa-chart-pie"></i></div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="input-section">
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+        </div>
+
+        <div class="input-group date-group">
+            <input type="date" id="date-input">
+        </div>
+
+        <button id="add-btn" class="add-btn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+    </div>
+
+    <div class="filter-section">
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Search tasks... (Ctrl+F)">
+        </div>
+
+        <div class="controls-wrapper">
+            <div class="dropdown-wrapper">
+                <button id="sort-btn" class="control-btn">
+                    <i class="fa-solid fa-arrow-down-short-wide"></i> SORT
+                </button>
+                <div id="sort-menu" class="dropdown-content">
+                    <div class="dropdown-item active" data-sort="newest">Newest First</div>
+                    <div class="dropdown-item" data-sort="oldest">Oldest First</div>
+                    <div class="dropdown-item" data-sort="az">A - Z</div>
+                    <div class="dropdown-item" data-sort="za">Z - A</div>
+                </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+                <button id="filter-btn" class="control-btn">
+                    <i class="fa-solid fa-filter"></i> FILTER
+                </button>
+                <div id="filter-menu" class="dropdown-content">
+                    <div class="dropdown-item active" data-filter="all">All Task</div>
+                    <div class="dropdown-item" data-filter="pending">Pending</div>
+                    <div class="dropdown-item" data-filter="completed">Completed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-controls">
+        <div class="info-label">
+           Manage your daily goals
+        </div>
+
+        <button id="delete-all-btn" class="delete-all-btn">
+            <i class="fa-solid fa-trash"></i> DELETE ALL
+        </button>
+    </div>
+
+    <div class="list-header">
+        <span class="col-task">TASK</span>
+        <span class="col-date">DUE DATE</span>
+        <span class="col-status">STATUS</span>
+        <span class="col-action">ACTIONS</span>
+    </div>
+
+    <ul id="todo-list" class="todo-list">
+        </ul>
+
+    <div class="footer">
+        Made with <i class="fa-solid fa-heart" style="color:#dc3545;"></i> by <b>Faizal Richi Candra</b>
+    </div>
+
+</div>
+
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Edit Task</h3>
+        <input type="text" id="edit-task-input" placeholder="Update task name...">
+        <input type="date" id="edit-date-input">
+        <button id="save-edit-btn">Save Changes</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
