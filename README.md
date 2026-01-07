@@ -50,7 +50,7 @@ This project was built using pure vanilla web technologies to demonstrate a stro
 
 1.  **Clone this repository** to your local machine:
     ```bash
-    git clone [https://github.com/mrichie97/todo-list-super-app.git](https://github.com/mrichie97/todo-list-super-app.git)
+    git clone [https://github.com/mrichie97/CodingCamp-5Jan26-faizalrichicandra.git](https://github.com/mrichie97/CodingCamp-5Jan26-faizalrichicandra.git)
     ```
 2.  **Open the project folder**.
 3.  **Double click** on `index.html` to open it in your web browser.
@@ -65,6 +65,8 @@ This project was built using pure vanilla web technologies to demonstrate a stro
 │   └── style.css   # All styling and responsive design
 ├── js/
 │   └── script.js   # Application logic, validations, and storage
+├── screenshot
+│   └── app.png     # App View
 └── README.md       # Project documentation
 
 ```
@@ -83,8 +85,8 @@ This project was created with passion by **Faizal Richi Candra** as part of the 
 
 ```
 
----
-
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
 Please attribute the original work to **Faizal Richi Candra**.
+
+---
